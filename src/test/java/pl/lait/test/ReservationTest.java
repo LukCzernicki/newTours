@@ -91,7 +91,7 @@ public class ReservationTest {
 		driver.findElement(By.name("reserveFlights")).click();
 		
 	
-		
+		/*
 		driver.findElement(By.name("passFirst0")).sendKeys("Heniek");
 		driver.findElement(By.name("passLast0")).sendKeys("Heńkowy");
 		
@@ -111,6 +111,7 @@ public class ReservationTest {
 		
 		
 		
+		
 		driver.findElement(By.xpath(ticketlessTravelRadioXpath)).click();
 		
 		String SameAsBillingAddressRadioXpath = "/html/body/div/table/tbody/tr/td[2]/table/"
@@ -120,7 +121,7 @@ public class ReservationTest {
 		driver.findElement(By.xpath(SameAsBillingAddressRadioXpath)).click();
 		
 		driver.findElement(By.name("buyFlights")).click();
-		
+		*/
 		
 		
 	}
