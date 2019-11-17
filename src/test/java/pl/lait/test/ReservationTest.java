@@ -36,7 +36,7 @@ public class ReservationTest {
 		
 		WebElement passCount = driver.findElement(By.name("passCount"));
 		Select passCountSelect = new Select(passCount);
-		passCountSelect.selectByValue("2");
+		passCountSelect.selectByValue("1");
 		
 		WebElement fromDay = driver.findElement(By.name("fromDay"));
 		Select fromDaySelect = new Select(fromDay);
@@ -54,11 +54,11 @@ public class ReservationTest {
 		Select toMonthSelect = new Select(toMonth);
 		toMonthSelect.selectByValue("12");
 		
-		String firstClass = "/html/body/div/table/tbody/tr/td[2]/table/"
+		String firstClassRadioXpath = "/html/body/div/table/tbody/tr/td[2]/table/"
 				+ "tbody/tr[4]/td/table/tbody/tr/td[2]/table/tbody/tr[5]/"
 				+ "td/form/table/tbody/tr[9]/td[2]/font/font/input[2]";
 		
-		driver.findElement(By.xpath(firstClass)).click();
+		driver.findElement(By.xpath(firstClassRadioXpath)).click();
 		
 		WebElement airline = driver.findElement(By.name("airline"));
 		Select airlineSelect = new Select(airline);
@@ -66,6 +66,60 @@ public class ReservationTest {
 		
 		driver.findElement(By.name("findFlights")).click();
 		
+		
+		String departFirstRadioXpath = "/html/body/div/table/tbody/tr/td[2]/table/tbody"
+				+ "/tr[4]/td/table/tbody/tr/td[2]/table/tbody/tr[5]/td/form/table[1]"
+				+ "/tbody/tr[3]/td[1]/input";
+		
+		String departSecondRadioXpath = "/html/body/div/table/tbody/tr/td[2]/table/tbody/"
+				+ "tr[4]/td/table/tbody/tr/td[2]/table/tbody/tr[5]/td/form/table[1]/tbody/"
+				+ "tr[5]/td[1]/input";
+		
+		driver.findElement(By.xpath(departSecondRadioXpath)).click();
+		
+		
+		String returnFirstRadioXpath = "/html/body/div/table/tbody/tr/td[2]/table/"
+				+ "tbody/tr[4]/td/table/tbody/tr/td[2]/table/tbody/tr[5]/td/form/"
+				+ "table[2]/tbody/tr[3]/td[1]/input";
+		
+		String returnSecondRadioXpath = "/html/body/div/table/tbody/tr/td[2]/"
+				+ "table/tbody/tr[4]/td/table/tbody/tr/td[2]/table/tbody"
+				+ "/tr[5]/td/form/table[2]/tbody/tr[5]/td[1]/input";
+		
+		driver.findElement(By.xpath(returnSecondRadioXpath)).click();
+		
+		driver.findElement(By.name("reserveFlights")).click();
+		
+	
+		
+		driver.findElement(By.name("passFirst0")).sendKeys("Heniek");
+		driver.findElement(By.name("passLast0")).sendKeys("Heńkowy");
+		
+		
+		WebElement Meal = driver.findElement(By.name("pass.0.meal"));
+		Select MealSelect = new Select(Meal);
+		MealSelect.selectByValue("HNML");
+		
+		
+		
+		driver.findElement(By.name("creditnumber")).sendKeys("1234567890");
+		
+		
+		String ticketlessTravelRadioXpath = "/html/body/div/table/tbody/tr/td[2]/table/tbody/"
+				+ "tr[4]/td/table/tbody/tr/td[2]/table/tbody/tr[5]/td/form/table/tbody/tr[8]/"
+				+ "td[2]/input";
+		
+		
+		
+		driver.findElement(By.xpath(ticketlessTravelRadioXpath)).click();
+		
+		String SameAsBillingAddressRadioXpath = "/html/body/div/table/tbody/tr/td[2]/table/"
+				+ "tbody/tr[4]/td/table/tbody/tr/td[2]/table/tbody/tr[5]/td/form/table/tbody/"
+				+ "tr[14]/td[2]/input";
+		
+		driver.findElement(By.xpath(SameAsBillingAddressRadioXpath)).click();
+		
+		driver.findElement(By.name("buyFlights")).click();
 		
 		
 		
