@@ -24,6 +24,8 @@ public class MenuTest {
 		driver.findElement(By.linkText("CONTACT")).click();
 		String title = driver.getTitle();
 		System.out.println(title);
+		
+	
 	}
 
 	@Test
