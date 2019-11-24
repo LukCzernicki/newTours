@@ -128,7 +128,7 @@ public class ReservationTest {
 
 	@After
 	public void tearDown() {
-		//driver.close();
+		Init.end();
 	}
 
 }

@@ -37,5 +37,12 @@ public class Init {
 			else {
 			return driver;
 		}
+		
+		
+	}
+	public static void end() {
+		driver.quit();
+		driver = null;
 	}
 }
+	

@@ -42,9 +42,11 @@ public class MenuTest {
 		System.out.println(title);
 	}
 	
+	
+	
 	@After
 	public void tearDown() {
-		driver.close();
+		Init.end();
 	}
 	
 
